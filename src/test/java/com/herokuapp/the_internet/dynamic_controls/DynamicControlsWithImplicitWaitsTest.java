@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 
 public class DynamicControlsWithImplicitWaitsTest {
 
@@ -36,7 +35,7 @@ public class DynamicControlsWithImplicitWaitsTest {
     @Test
     public void testDynamicLoadedMessageWithChromeOptionsImplicitWait() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        Duration duration = Duration.of(4, ChronoUnit.SECONDS);
+        Duration duration = Duration.ofSeconds(4);
         chromeOptions.setImplicitWaitTimeout(duration);
 
         driver = new ChromeDriver(chromeOptions);
